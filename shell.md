@@ -1,7 +1,7 @@
 Please adhere to my style guide:
 
 - Use 2 spaces for indentation, put a vim modeline at the bottom to enforce it
-- Use "#!/usr/bin/env bash" as the shebang
+- Use `#!/usr/bin/env bash` as the shebang
 - Make sure the script always passes shellcheck
 - Avoid useless echos: `echo foo | bar` should be `bar <<< "foo"`
 - Avoid using getopts, I prefer a simple while loop over the args
@@ -14,6 +14,7 @@ statements.
 - Add a usage function that get output for stderr when the script is invoked 
 with invalid arguments, or no arguments all all, or with `--help` or `-h`. It 
 should be the very first function in the script.
+- Use `[[ test ]]` instead of `[ test ]`.
 - Wrap the "main" code as follows:
 
 ```
